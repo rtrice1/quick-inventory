@@ -1,0 +1,77 @@
+<%= form_for(inventory) do |f| %>
+  <% if inventory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(inventory.errors.count, "error") %> prohibited this inventory from being saved:</h2>
+
+      <ul>
+      <% inventory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :AssetTag %>
+    <%= f.text_field :AssetTag %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Model %>
+    <%= f.text_field :Model %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Serial %>
+    <%= f.text_field :Serial %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Description %>
+    <%= f.text_field :Description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Location %>
+    <%= f.text_field :Location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :POC %>
+    <%= f.text_field :POC %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Disposition %>
+    <%= f.text_area :Disposition %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Win7 %>
+    <%= f.text_field :Win7 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Office %>
+    <%= f.text_field :Office %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Access %>
+    <%= f.text_field :Access %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Visio %>
+    <%= f.text_field :Visio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Project %>
+    <%= f.text_field :Project %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

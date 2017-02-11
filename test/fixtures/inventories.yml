@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  AssetTag: MyString
+  Model: MyString
+  Serial: MyString
+  Description: 
+  Location: MyString
+  POC: MyString
+  Disposition: MyText
+  Win7: MyString
+  Office: MyString
+  Access: MyString
+  Visio: MyString
+  Project: MyString
+
+two:
+  AssetTag: MyString
+  Model: MyString
+  Serial: MyString
+  Description: 
+  Location: MyString
+  POC: MyString
+  Disposition: MyText
+  Win7: MyString
+  Office: MyString
+  Access: MyString
+  Visio: MyString
+  Project: MyString

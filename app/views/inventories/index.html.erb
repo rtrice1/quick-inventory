@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Inventories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>ItemType</th>
+      <th>item_id</th>
+      <th>event</th>
+      <th>created_at</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @versions.each do |inventory| %>
+      <tr>
+        <td><%= inventory.id %></td>
+        <td><%= inventory.item_type %></td>
+        <td><%= inventory.item_id %></td>
+        <td><%= inventory.event %></td>
+        <td><%= inventory.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Inventory', new_inventory_path %>

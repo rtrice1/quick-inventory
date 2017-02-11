@@ -1,0 +1,16 @@
+default: &defaults
+    ldap_server: '<SERVERNAME>'
+    ldap_port: 389
+    ldap_encryption: none
+    ldap_base: '<LDAPBASE>'
+    ldap_domain: '<LDAPDOMAIN>'
+    ldap_connect_method: simple
+
+development:
+    <<: *defaults
+
+test:
+    <<: *defaults
+
+production:
+    <<: *defaults
