@@ -87,3 +87,8 @@ div {
 label {
   display: block;
 }
+.sui-hover .sui-row:hover, .sui-hover .sui-alt-row:hover, .sui-hover .sui-selected:hover td, .sui-hover .sui-selected:hover td {
+    color: #fff;
+    background-color: #337ab7;
+    !important;
+}

@@ -76,7 +76,7 @@ end
 
 class VersionsController < InventoriesController
   def index
-    @versions = Inventory.find(params[:inventory_id]).versions
+    @versions = Inventory.find(params[:inventory_id]).versions.reverse
     respond_to do |format|
       format.json { render :layout =>  false, :json => @versions.to_json() }
     end

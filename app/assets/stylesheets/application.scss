@@ -9,10 +9,10 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
+ * @import '//shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css';
  *
  */
 @import '//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css';
 @import '//shieldui.com/shared/components/latest/css/shieldui-all.min.css';
-@import '//shieldui.com/shared/components/latest/css/light/all.min.css';
 @import 'bootstrap-sprockets';
 @import 'bootstrap';

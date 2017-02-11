@@ -35,6 +35,7 @@ $ ->
           Location: { path: 'Location', type: String }
           POC: { path: 'POC', type: String }
           Disposition: { path: 'Disposition', type: String }
+          updated_at: { path: 'updated_at', type: String }
       remote:
         read: '/inventories.json'
         modify:
@@ -78,8 +79,9 @@ $ ->
       { field: 'AssetTag', title: 'AssetTag', width: 50 },
       { field: 'Model', title: 'Model', width: 100 },
       { field: 'Serial', title: 'Serial', width: 100 },
-      { field: 'Location', title: 'Location', width: 100 },
+      { field: 'Location', title: 'Location', width: 50 },
       { field: 'Disposition', title: 'Disposition', width: 200 },
+      { field: 'updated_at', title: 'last update', width: 100 },
       {
         title: 'Actions',
         width: 70,
@@ -106,3 +108,41 @@ $ ->
         position: 'top'
       }
     ]
+  dataSource = $('#inventories').swidget().dataSource
+  input = $('#filterbox input')
+  timeout = undefined
+  value = undefined
+  input.on 'keydown', ->
+    clearTimeout timeout
+
+    timeout = setTimeout((->
+      value = input.val()
+      if value
+        dataSource.filter = or: [
+          {
+            path: 'AssetTag'
+            filter: 'contains'
+            value: value
+          }
+          {
+            path: 'Location'
+            filter: 'contains'
+            value: value
+          }
+          {
+            path: 'Serial'
+            filter: 'contains'
+            value: value
+          }
+          {
+            path: 'Model'
+            filter: 'contains'
+            value: value
+          }
+        ]
+      else
+        dataSource.filter = null
+      dataSource.read()
+      return
+    ), 300)
+    return
