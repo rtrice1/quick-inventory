@@ -28,6 +28,8 @@ $ ->
       schema:
         fields:
           id: { path: 'id', type: Number }
+          room: { path: 'room', type: String }
+          contract: { path: 'contract', type: String }
           AssetTag: { path: 'AssetTag', type: String }
           Model: { path: 'Model', type: String }
           Serial: { path: 'Serial', type: String }
@@ -76,12 +78,14 @@ $ ->
 
     sorting: true
     columns: [
+      { field: 'contract', title: 'Contract', width: 40 },
       { field: 'AssetTag', title: 'AssetTag', width: 50 },
       { field: 'Model', title: 'Model', width: 100 },
       { field: 'Serial', title: 'Serial', width: 100 },
       { field: 'Location', title: 'Location', width: 50 },
+      { field: 'room', title: 'Room', width: 50 },
       { field: 'Disposition', title: 'Disposition', width: 200 },
-      { field: 'updated_at', title: 'last update', width: 100 },
+      { field: 'updated_at', title: 'last update', width: 50 },
       {
         title: 'Actions',
         width: 70,
