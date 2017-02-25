@@ -28,8 +28,6 @@ $ ->
       schema:
         fields:
           id: { path: 'id', type: Number }
-          room: { path: 'room', type: String }
-          contract: { path: 'contract', type: String }
           AssetTag: { path: 'AssetTag', type: String }
           Model: { path: 'Model', type: String }
           Serial: { path: 'Serial', type: String }
@@ -37,7 +35,15 @@ $ ->
           Location: { path: 'Location', type: String }
           POC: { path: 'POC', type: String }
           Disposition: { path: 'Disposition', type: String }
+          Win7: { path: 'Win7', type: String }
+          Office: { path: 'Offie', type: String }
+          Access: { path: 'Access', type: String }
+          Visio: { path: 'Visio', type: String }
+          Project: { path: 'Project', type: String }
+          created_at: { path: 'created_at', type: String }
           updated_at: { path: 'updated_at', type: String }
+          contract: { path: 'contract', type: String }
+          room: { path: 'room', type: String }
       remote:
         read: '/inventories.json'
         modify:
@@ -78,7 +84,7 @@ $ ->
 
     sorting: true
     columns: [
-      { field: 'contract', title: 'Contract', width: 40 },
+      { field: 'contract', title: 'Contract', width: 50 },
       { field: 'AssetTag', title: 'AssetTag', width: 50 },
       { field: 'Model', title: 'Model', width: 100 },
       { field: 'Serial', title: 'Serial', width: 100 },

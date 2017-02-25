@@ -70,7 +70,7 @@ class InventoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def inventory_params
-      params.require(:inventory).permit(:AssetTag, :Model, :Serial, :Description, :Location, :POC, :Disposition, :Win7, :Office, :Access, :Visio, :Project)
+      params.require(:inventory).permit(:id, :contract, :room, :updated_at, :created_at, :AssetTag, :Model, :Serial, :Description, :Location, :POC, :Disposition, :Win7, :Office, :Access, :Visio, :Project)
     end
 end
 
