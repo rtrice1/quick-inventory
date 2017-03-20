@@ -146,6 +146,11 @@ $ ->
             value: value
           }
           {
+            path: 'POC'
+            filter: 'contains'
+            value: value
+          }
+          {
             path: 'Model'
             filter: 'contains'
             value: value
