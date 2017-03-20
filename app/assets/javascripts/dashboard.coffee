@@ -90,6 +90,7 @@ $ ->
       { field: 'Serial', title: 'Serial', width: 100 },
       { field: 'Location', title: 'Location', width: 50 },
       { field: 'room', title: 'Room', width: 50 },
+      { field: 'POC', title: 'POC', width: 50 },
       { field: 'Disposition', title: 'Disposition', width: 200 },
       { field: 'updated_at', title: 'last update', width: 50 },
       {
