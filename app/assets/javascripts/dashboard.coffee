@@ -22,6 +22,14 @@ detailCreated = (e) ->
       { field: 'whodunnit', title: 'Changed By', width: 100},
       { field: 'created_at', title: 'Created At', width: 100 }
     ]
+
+onDataBound = (e) ->
+  if current_user is ''
+    console.log(current_user)
+    $('.editButton').hide()
+    $('.deleteButton').hide()
+    $('.sui-toolbar').hide()
+
 $ ->
   $('#inventories').shieldGrid
     dataSource:
@@ -80,6 +88,7 @@ $ ->
         },
     events: {
         detailCreated: detailCreated
+        dataBound: onDataBound
     },
 
     sorting: true
